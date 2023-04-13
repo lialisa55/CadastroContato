@@ -16,5 +16,16 @@ namespace AgendaContatos
         {
             InitializeComponent();
         }
+
+        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Contato contato = new Contato();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Conexao conexao = new Conexao();
+            MessageBox.Show(conexao.conectar());
+        }
     }
 }
