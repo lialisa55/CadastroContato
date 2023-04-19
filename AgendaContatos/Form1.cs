@@ -20,12 +20,20 @@ namespace AgendaContatos
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Contato contato = new Contato();
+            FormCadastro cadastro = new FormCadastro();
+            cadastro.MdiParent = this;
+            cadastro.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             Conexao conexao = new Conexao();
             MessageBox.Show(conexao.conectar());
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            statusStrip1.Text = DateTime.Now.ToString();
         }
     }
 }

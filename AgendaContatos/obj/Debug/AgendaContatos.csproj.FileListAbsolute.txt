@@ -30,3 +30,4 @@ G:\MODULO2\AgendaContatos\AgendaContatos\bin\Debug\System.Runtime.CompilerServic
 G:\MODULO2\AgendaContatos\AgendaContatos\obj\Debug\AgendaContatos.csproj.CopyComplete
 G:\MODULO2\AgendaContatos\AgendaContatos\obj\Debug\AgendaContatos.exe
 G:\MODULO2\AgendaContatos\AgendaContatos\obj\Debug\AgendaContatos.pdb
+G:\MODULO2\AgendaContatos\AgendaContatos\obj\Debug\AgendaContatos.FormCadastro.resources
