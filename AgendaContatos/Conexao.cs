@@ -23,5 +23,17 @@ namespace AgendaContatos
                 return (e.ToString());
             }
         }
+        public string desconectar()
+        {
+            try
+            {
+                con.Close();
+                return ("Conexão encerrada.");
+            }
+            catch (MySqlException e)
+            {
+                return (e.ToString());
+            }
+        }
     }
 }
