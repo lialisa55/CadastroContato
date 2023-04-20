@@ -10,7 +10,6 @@ namespace AgendaContatos
     class Controle
     {
         Conexao c = new Conexao();
-
         public string Cadastrar(Contato cont)
         {
             try
@@ -30,6 +29,27 @@ namespace AgendaContatos
             {
                 return (e.ToString());
             }
+
+            
+        }
+        public string Alterar(Contato cont)
+        {
+            try
+            {
+                string sql = "UPDATE tbcontato set nome = '" + cont.Nome + "', telefone = '" + cont.Telefone + "', celular = '" + cont.Celular + "', email = '" + cont.Email + "' where codContato = " + cont.CodContato;
+
+                MySqlCommand cmd = new MySqlCommand(sql, c.con);
+
+                c.conectar();
+                cmd.ExecuteNonQuery();
+                c.desconectar();
+                return ("Alteração realizada com sucesso.");
+            }
+            catch (MySqlException e)
+            {
+                return (e.ToString());
+            }
+            
         }
     }
 }

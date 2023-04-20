@@ -47,5 +47,25 @@ namespace AgendaContatos
                 limpar();
             }
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == "")
+            {
+                MessageBox.Show("A alteração precisa de um código.");
+            }
+
+            else
+            {
+                cont.CodContato = int.Parse(txtCodigo.Text);
+                cont.Nome = txtNome.Text;
+                cont.Telefone = txtTelefone.Text;
+                cont.Email = txtEmail.Text;
+                cont.Celular = txtCelular.Text;
+
+                MessageBox.Show(controle.Alterar(cont));
+                limpar();
+            }
+        }
     }
 }
