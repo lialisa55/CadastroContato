@@ -35,5 +35,11 @@ namespace AgendaContatos
         {
             statusStrip1.Text = DateTime.Now.ToString();
         }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 sobre = new AboutBox1();
+            sobre.Show();
+        }
     }
 }

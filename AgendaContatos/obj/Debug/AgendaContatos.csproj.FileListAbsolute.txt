@@ -31,3 +31,4 @@ G:\MODULO2\AgendaContatos\AgendaContatos\obj\Debug\AgendaContatos.csproj.CopyCom
 G:\MODULO2\AgendaContatos\AgendaContatos\obj\Debug\AgendaContatos.exe
 G:\MODULO2\AgendaContatos\AgendaContatos\obj\Debug\AgendaContatos.pdb
 G:\MODULO2\AgendaContatos\AgendaContatos\obj\Debug\AgendaContatos.FormCadastro.resources
+G:\MODULO2\AgendaContatos\AgendaContatos\obj\Debug\AgendaContatos.AboutBox1.resources
