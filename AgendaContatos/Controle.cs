@@ -51,5 +51,26 @@ namespace AgendaContatos
             }
             
         }
+        public string Deletar (Contato cont)
+        {
+            try
+            {
+                string sql = "DELETE FROM tbcontato where codcontato = " + cont.CodContato + ";";
+
+                MySqlCommand cmd = new MySqlCommand(sql, c.con);
+
+                c.conectar();
+                cmd.ExecuteNonQuery();
+                c.desconectar();
+                return ("Contato excluído com sucesso");
+            }
+            catch (MySqlException e)
+            {
+                return (e.ToString());
+            }
+
+
+        }
+
     }
 }

@@ -67,5 +67,20 @@ namespace AgendaContatos
                 limpar();
             }
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == "")
+            {
+                MessageBox.Show("A deleção precisa de um código.");
+            }
+            else
+            {
+                cont.CodContato = int.Parse(txtCodigo.Text);
+
+                MessageBox.Show(controle.Deletar(cont));
+                limpar();
+            }
+        }
     }
 }
