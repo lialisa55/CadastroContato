@@ -71,6 +71,49 @@ namespace AgendaContatos
 
 
         }
+        
+        public Contato buscar (int codigo)
+        {
+            Contato contato = new Contato();
+
+            try
+            {
+                string sql = "select * from tbcontato where codcontato =" + codigo + ";";
+
+                MySqlCommand cmd = new MySqlCommand(sql, c.con);
+
+                c.conectar();
+
+                MySqlDataReader Dados = cmd.ExecuteReader();
+
+                if (Dados.HasRows)
+                {
+                    Dados.Read();
+
+                    contato.CodContato = Convert.ToInt32(Dados["codcontato"]);
+                    contato.Nome = Dados["nome"].ToString();
+                    contato.Telefone = Dados["telefone"].ToString();
+                    contato.Celular = Dados["celular"].ToString();
+                    contato.Email = Dados["email"].ToString();
+
+                    Dados.Close();
+
+                    return contato;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (MySqlException e)
+            {
+                throw (e);
+            }
+            finally
+            {
+                c.desconectar();
+            }
+        }
 
     }
 }
