@@ -97,7 +97,7 @@ namespace AgendaContatos
             // 
             this.txtTelefone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtTelefone.Location = new System.Drawing.Point(103, 131);
-            this.txtTelefone.Mask = "(99) 00000-0000";
+            this.txtTelefone.Mask = "(99) 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(100, 20);
             this.txtTelefone.TabIndex = 6;
@@ -166,6 +166,7 @@ namespace AgendaContatos
             this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FormCadastro
             // 

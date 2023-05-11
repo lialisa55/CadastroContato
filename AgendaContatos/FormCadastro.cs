@@ -82,5 +82,31 @@ namespace AgendaContatos
                 limpar();
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cont = controle.buscar(int.Parse(txtCodigo.Text));
+                if (cont is null)
+                {
+                    MessageBox.Show("O registro não foi encontrado");
+                    limpar();
+                    txtCodigo.Focus();
+                }
+                else
+                {
+                    txtCodigo.Text = cont.CodContato.ToString();
+                    txtNome.Text = cont.Nome;
+                    txtEmail.Text = cont.Email;
+                    txtTelefone.Text = cont.Telefone;
+                    txtCelular.Text = cont.Celular;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
