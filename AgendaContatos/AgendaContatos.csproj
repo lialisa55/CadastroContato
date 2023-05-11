@@ -102,6 +102,7 @@
     <Compile Include="FormCadastro.Designer.cs">
       <DependentUpon>FormCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutBox1.resx">
